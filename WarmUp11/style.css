@@ -1,0 +1,38 @@
+body{
+	background-color:white; 
+}
+
+#right{
+	color: white;
+	width:5%;
+	height: 4%;
+	background-color: #33FF64;
+}
+#left{
+	color: white;
+	width:5%;
+	height: 4%;
+	background-color: #CAFF33;
+}
+
+#create{
+	color: white;
+	width:5%;
+	height: 4%;
+	background-color: #33FFF0;
+}
+
+#leftLi{
+	align-self: left;
+	text-align: left;
+	color: #CAFF33;
+}
+#rightLi{
+	align-self: right;
+	color:#33FF64;
+}
+
+#text{
+	width: 30%;
+	height: 200px;
+}
