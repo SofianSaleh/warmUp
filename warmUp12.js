@@ -22,3 +22,48 @@ Technical Details
     -The maximum size of a range will be 100 integers
     -The starting number of a range will be: 0 < n < 100
  */
+
+ function mysteryRange(string,number){
+ 	if(number > 100 || number < 0){
+ 		return 'Out of range'
+ 	}
+var array =[]
+var arr = []
+var string ='1568141291110137'
+ 	for (var i = 0; i < string.length; i++) {
+ 		if(string[i] === '1')
+ 		array.push(string[i],string[i+1])
+ 	console.log(array)
+ 		
+ 	}
+ 	for (var j = 0; j < array.length; j=j+2) {
+ 		
+ 		arr[j]= array[j]+array[j+1]
+ 		console.log(arr)
+ 	}
+ 
+
+
+
+ for (var i = 0; i < array.length; i++)
+
+  if(array[i] !== '1'
+
+  		arr.push(array[i
+
+  	}
+	}
+array = string.split('1')
+ console.log(array)
+ var maximum = array[0];
+ var minimum = array[0];
+ for (var i = 0; i > array.lenght; i++){
+ 	if(maximum <= array[i]){
+ 		maximum = array[i]
+ 	}
+ }return maximum;
+
+
+ /* i wanted to firstly convert the string into numbers then put them into an array and then iterarate over them
+ to see which one is the max and the min
+ 
