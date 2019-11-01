@@ -16,6 +16,8 @@
             C          100
             D          500
             M          1,000 
+
+
     
     2. Complete the method/function so that it converts dash/underscore delimited words into camel casing. The first word within the output should be capitalized only if the original word was capitalized (known as Upper Camel Case, also often referred to as Pascal case).
         Examples:
@@ -31,3 +33,111 @@
             filter_list([1,'a','b',0,15]) == [1,0,15]
             filter_list([1,2,'aasf','1','123',123]) == [1,2,123]
 */
+
+function romanNumbers(str) {
+
+    var arr = str.split('');
+    var result = 0;
+    var array =[];
+    
+    for(var j = 0; j < arr.length; j++) {
+
+        if(arr[j] === 'I') {
+
+            array.push(1);
+
+        }
+
+        if(arr[j] === 'V') {
+
+            array.push(5);
+
+        }
+
+       if(arr[j] === 'X') {
+
+            array.push(10);
+
+        }
+
+        if(arr[j] === 'L') {
+
+            array.push(50);
+
+        }
+
+        if(arr[j] === 'C') {
+
+            array.push(100);
+
+        }
+
+        if(arr[j] === 'D') {
+
+            array.push(500);
+
+        }
+
+        if(arr[j] === 'M') {
+
+            array.push(1000);
+
+        }
+
+        result = result + array[j];
+
+    }
+
+    return result;
+    
+} 
+
+
+function toCamelCase(str) {
+
+    var string = '';
+    var Camel = '';
+
+    if(str.indexOf('-') !== -1) {
+
+        string = str.split('-');
+
+        Camel = Camel + string[0];
+
+    }else if(str.indexOf('_') !== -1) {
+
+        string = str.split('_');
+
+        Camel = Camel + string[0];
+    }
+    for( var i = 1; i < string.length; i++) {
+
+        Camel = Camel + string[i][0].toUpperCase();
+
+        for(var j = 1; j < string[i].length;j++) {
+
+        Camel = Camel + string[i][j];
+
+        }
+    }return Camel;
+    
+}
+
+
+function filter_list (array){
+
+    var arr = [];
+
+    for(var i = 0; i < array.length; i++){
+        if(arr[i] < 0){
+            return 'There is a negative number';
+        }
+    }
+
+    for (var j = 0; j < array.length; j++){
+        if(typeof(array[j])==='number'){
+            arr.push(array[j]);
+        }
+    }return arr;
+
+}
