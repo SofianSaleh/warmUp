@@ -20,4 +20,42 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
 
 var maxProfit = function(prices) {
   // YOUR CODE HERE
+  var profit = 0;
+  var buy = prices[0];
+  var sell = 0;
+  var sellPrices; 
+  
+
+  for(var i = 0 ; i < prices.length; i++) {
+
+  	if(prices[i] < buy) {
+  
+  		buy = prices[i];
+  		
+  		sellPrices= prices.slice(i+1,prices.length);
+  		 
+  	}
+
+  }
+
+  if(sellPrices.length === 0) {
+
+  	return 0;
+
+  }
+
+  profit = sellPrices[0]-buy
+
+  for ( var j = 0; j < sellPrices.length; j++) {
+
+  	if(profit <= sellPrices[j] - buy) {
+
+  		profit = sellPrices[j] - buy;
+
+  	}
+
+  }
+
+  return profit;
+  
 };
