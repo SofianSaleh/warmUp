@@ -17,5 +17,4 @@ function reverseStr(str) {
 	}
 
 	return reverse;
-
 }
