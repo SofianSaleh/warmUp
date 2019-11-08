@@ -27,6 +27,65 @@
 
 // ​
 // ​
-// var calculateTime = function(keyboard, word) {
-    
+ var calculateTime = function(keyboard, word) {
+	var regEx = /[A-Z]/g;
+	var arr =[];
+	var num = 0;
+	if(keyboard.search(regEx) === true){
+		return "Keyboard should be lower cased";
+	}
+    if(keyboard.length !== 26) {
+    	return "Invalid keyboard length";
+    }
+    if(word.length <= 10^4 || word.length1 <= 1){
+    	for(var i = 0 ; i < keyboard.length; i++) {
+    		for(var j = 0; j < word.length; j++) {
+    			if(keyboard[i] === word[j]) {
+    			console.log(j);
+    				arr.push(j);
+    			}
+    		}
+
+    	}
+    	num = arr[0]
+    	for(var k = 0; k < arr.length-1; k++) {
+    		
+    		num = num + Math.abs(arr[k] - arr[k+1]);
+    		
+    	}
+    }
+    return num;
+};
+
+
+//  var calculateTime = function(keyboard, word) {
+// 	var regEx = /[A-Z]/g;
+// 	var arr =[];
+// 	var num = 0;
+// 	var str = word.split('')
+// 	if(keyboard.search(regEx) === true){
+// 		return "Keyboard should be lower cased"
+// 	}
+//     if(keyboard.length !== 26) {
+//     	return "Invalid keyboard length"
+//     }
+//     if(word.length <= 10^4 || word.length <= 1){
+//     	for(var i = 0 ; i < keyboard.length; i++) {
+//     			if(keyboard[i] === str[0]) {
+//     			console.log(i)
+//     				arr.push(i)
+//     				str.slice(1)
+//     				console.log(word)
+//     			}
+//     		}
+
+    	
+//     	num = arr[0]
+//     	for(var k = 0; k < arr.length-1; k++) {
+    		
+//     		num = num + Math.abs(arr[k] - arr[k+1])
+    		
+//     	}
+//     }
+//     return num
 // };
